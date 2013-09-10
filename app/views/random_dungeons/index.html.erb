@@ -1,0 +1,16 @@
+<h1>Random Dungeons for GW2</h1>
+
+<%= link_to "Randomnize me a dungeon!", :generate_random_dungeon, remote: true %>
+
+<p>
+  <div id="random_dungeon"></div>
+</p>
+
+<p>Here is the list of GW2 Dungeons:</p>
+
+<ul>
+  <% Dungeon.all.each do |dungeon| %>
+  <li><%= dungeon.name %></li>
+  <% end %>    
+</ul>
+
